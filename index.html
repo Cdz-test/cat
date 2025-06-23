@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliway - Le Diffuseur Connecté pour le Bonheur de Votre Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #8B5CF6 0%, #D946EF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #F3E7FE 0%, #E9D5FF 50%, #F3E7FE 100%);
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .paw-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239333ea' fill-opacity='0.03'%3E%3Cpath d='M20 20c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm-6-8c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm12 0c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-6 4c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+        }
+        .pulse-animation {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        .scroll-animation.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <meta name="description" content="un super site pour le diffuseur Feliway">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class="bg-white">
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-md z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-paw text-3xl text-purple-600"></i>
+                <span class="text-2xl font-bold gradient-text">Feliway</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#accueil" class="text-gray-700 hover:text-purple-600 transition-colors">Accueil</a>
+                <a href="#fonctionnalites" class="text-gray-700 hover:text-purple-600 transition-colors">Fonctionnalités</a>
+                <a href="#avantages" class="text-gray-700 hover:text-purple-600 transition-colors">Avantages</a>
+                <a href="#temoignages" class="text-gray-700 hover:text-purple-600 transition-colors">Témoignages</a>
+                <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+            </div>
+            <button class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-all transform hover:scale-105">
+                Commander
+            </button>
+        </div>
+    </nav>
+
+    <section id="accueil" class="hero-bg min-h-screen flex items-center paw-pattern pt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                        <span class="gradient-text">Feliway</span><br>
+                        <span class="text-gray-800">Le Bonheur Connecté</span><br>
+                        <span class="text-gray-800">pour Votre Chat</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Transformez l'environnement de votre félin avec notre diffuseur intelligent qui crée une atmosphère apaisante et harmonieuse. Contrôlez le bien-être de votre chat depuis votre smartphone!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <button class="bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-700 transform hover:scale-105 transition-all shadow-lg pulse-animation">
+                            <i class="fas fa-shopping-cart mr-2"></i> Commander Maintenant
+                        </button>
+                        <button class="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-50 transform hover:scale-105 transition-all shadow-lg border-2 border-purple-600">
+                            <i class="fas fa-play-circle mr-2"></i> Voir la Démo
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-8 mt-8 justify-center md:justify-start">
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-purple-600">98%</p>
+                            <p class="text-gray-600">Chats Apaisés</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-purple-600">24/7</p>
+                            <p class="text-gray-600">Surveillance</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-purple-600">30j</p>
+                            <p class="text-gray-600">Garantie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MjU1MDF8MHwxfHNlYXJjaHwyfHxjYXR8ZW58MHwyfHx8MTc1MDY5NjQ1N3ww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Diffuseur Feliway" class="rounded-3xl shadow-2xl float-animation">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-wifi text-purple-600 text-2xl"></i>
+                            <div>
+                                <p class="font-semibold">Connecté 24/7</p>
+                                <p class="text-sm text-gray-600">Application Mobile</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fonctionnalites" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-animation">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Fonctionnalités Innovantes</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Découvrez comment Feliway révolutionne le bien-être félin avec des technologies de pointe
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover scroll-animation" style="animation-delay: 0.2s">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">IA Adaptative</h3>
+                    <p class="text-gray-600 mb-4">
+                        Notre intelligence artificielle apprend les habitudes de votre chat et ajuste automatiquement la diffusion pour un confort optimal.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Apprentissage comportemental</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Adaptation automatique</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Rapports personnalisés</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover scroll-animation">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Contrôle via App</h3>
+                    <p class="text-gray-600 mb-4">
+                        Gérez l'intensité et les horaires de diffusion directement depuis votre smartphone. Programmez des routines personnalisées pour votre chat.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Programmation intelligente</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Notifications en temps réel</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Historique d'utilisation</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover scroll-animation" style="animation-delay: 0.4s">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-leaf text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Formule Naturelle</h3>
+                    <p class="text-gray-600 mb-4">
+                        Phéromones félines 100% naturelles et sans danger, approuvées par les vétérinaires pour apaiser et rassurer votre compagnon.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Ingrédients biologiques</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Sans produits chimiques</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Certifié vétérinaire</li>
+                    </ul>
+                </div>
+            </div><div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover scroll-animation" style="animation-delay: 0.2s">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">IA Adaptative</h3>
+                    <p class="text-gray-600 mb-4">
+                        Notre intelligence artificielle apprend les habitudes de votre chat et ajuste automatiquement la diffusion pour un confort optimal.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Apprentissage comportemental</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Adaptation automatique</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Rapports personnalisés</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover scroll-animation">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Contrôle via App</h3>
+                    <p class="text-gray-600 mb-4">
+                        Gérez l'intensité et les horaires de diffusion directement depuis votre smartphone. Programmez des routines personnalisées pour votre chat.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Programmation intelligente</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Notifications en temps réel</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Historique d'utilisation</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover scroll-animation" style="animation-delay: 0.4s">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-leaf text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Formule Naturelle</h3>
+                    <p class="text-gray-600 mb-4">
+                        Phéromones félines 100% naturelles et sans danger, approuvées par les vétérinaires pour apaiser et rassurer votre compagnon.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Ingrédients biologiques</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Sans produits chimiques</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i>Certifié vétérinaire</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-gradient-to-br from-green-100 via-yellow-50 to-white py-20 px-6 md:px-16 lg:px-32 overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute -top-16 -left-16 w-72 h-72 bg-green-200 opacity-40 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-orange-200 opacity-30 rounded-full blur-3xl"></div>
+  </div>
+  <div class="relative max-w-5xl mx-auto z-10 flex flex-col lg:flex-row items-center gap-14">
+    <div class="flex-1 flex flex-col gap-10">
+      <div class="flex items-center gap-4">
+        <i class="fa fa-cat text-4xl text-green-500"></i>
+        <h2 class="text-3xl md:text-4xl font-bold text-orange-700 tracking-tight">
+          Le rythme naturel des chats blancs
+        </h2>
+      </div>
+      <div class="space-y-8">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0">
+            <img src="https://fakeimg.pl/80x80" alt="Chat détendu" class="rounded-xl shadow-lg bg-white">
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-green-600 flex items-center gap-2">
+              <i class="fa fa-moon text-green-400"></i> Créatures crépusculaires
+            </h3>
+            <p class="text-gray-700 mt-1">
+              Les chats vivent selon un rythme unique : actifs à l'aube et au crépuscule, ils dorment et explorent souvent en alternance avec des périodes de jeux et de chasse.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0">
+            <img src="https://fakeimg.pl/80x80" alt="Chat stressé" class="rounded-xl shadow-lg bg-white">
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-orange-500 flex items-center gap-2">
+              <i class="fa fa-exclamation-triangle text-orange-400"></i> Sensibles au changement
+            </h3>
+            <p class="text-gray-700 mt-1">
+              Les chats sont très sensibles aux nouveautés et aux changements de leur environnement (déménagement, arrivée d'un bébé, nouveaux meubles…) ce qui peut provoquer du stress.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0">
+            <img src="https://fakeimg.pl/80x80" alt="Chat qui joue" class="rounded-xl shadow-lg bg-white">
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-green-600 flex items-center gap-2">
+              <i class="fa fa-play text-green-400"></i> Besoin de stimulation
+            </h3>
+            <p class="text-gray-700 mt-1">
+              Les chats ont besoin d'exercice mental et physique quotidien. Les jouets interactifs et les sessions de jeu régulières sont essentiels pour leur bien-être et prévenir les comportements destructeurs.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0">
+            <img src="https://fakeimg.pl/80x80" alt="Chat qui dort" class="rounded-xl shadow-lg bg-white">
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-orange-500 flex items-center gap-2">
+              <i class="fa fa-bed text-orange-400"></i> Sommeil réparateur
+            </h3>
+            <p class="text-gray-700 mt-1">
+              Les chats dorment en moyenne 15 heures par jour, parfois jusqu'à 20 heures pour les chatons et les seniors. Ce sommeil est essentiel pour leur santé et leur équilibre émotionnel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1 flex flex-col items-center gap-8">
+      <div class="relative w-80 h-80 bg-white rounded-3xl shadow-2xl flex items-center justify-center">
+        <img src="https://fakeimg.pl/240x240" alt="Diffuseur Feliway" class="rounded-2xl shadow-lg object-cover w-60 h-60">
+        <div class="absolute -top-4 -right-4 bg-green-500 text-white rounded-full px-4 py-2 text-sm font-bold shadow-lg flex items-center gap-2 animate-bounce">
+          <i class="fa fa-magic"></i>
+          Feliway
+        </div>
+      </div>
+      <div class="bg-gradient-to-r from-green-400 via-yellow-400 to-orange-300 bg-clip-text text-transparent text-2xl font-bold flex items-center gap-3">
+        <i class="fa fa-heartbeat"></i>
+        Pourquoi Feliway ?
+      </div>
+      <div class="text-gray-700 text-base text-center max-w-xs">
+        Feliway diffuse des phéromones apaisantes qui aident votre chat à retrouver son équilibre, réduisant peurs et tensions pour une vie plus sereine à vos côtés.
+      </div>
+      <div class="bg-green-100 p-4 rounded-xl border border-green-200 mt-4">
+        <h4 class="font-semibold text-green-700 mb-2 flex items-center gap-2">
+          <i class="fa fa-certificate text-orange-500"></i> Efficacité prouvée
+        </h4>
+        <p class="text-sm text-gray-600">
+          95% des propriétaires observent une réduction significative des comportements liés au stress dans les 30 jours suivant l'utilisation régulière de Feliway.
+        </p>
+      </div>
+      <a href="#" class="inline-block mt-3 px-8 py-3 bg-gradient-to-r from-green-500 to-orange-400 text-white font-semibold rounded-2xl shadow-lg hover:scale-105 transition-transform duration-200">
+        Découvrir Feliway
+      </a>
+    </div>
+  </div>
+</section><section class="py-20 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                        Comment Feliway Transforme la Vie de Votre Chat
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white/20 p-3 rounded-full flex-shrink-0">
+                                <i class="fas fa-heart text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Réduction du Stress</h3>
+                                <p class="text-purple-100">Diminue significativement l'anxiété liée aux changements d'environnement, aux bruits forts ou aux visites.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white/20 p-3 rounded-full flex-shrink-0">
+                                <i class="fas fa-home text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Harmonie à la Maison</h3>
+                                <p class="text-purple-100">Favorise la cohabitation pacifique entre plusieurs chats et réduit les conflits territoriaux.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white/20 p-3 rounded-full flex-shrink-0">
+                                <i class="fas fa-moon text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Sommeil Amélioré</h3>
+                                <p class="text-purple-100">Aide votre chat à se détendre et à profiter d'un sommeil réparateur et paisible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MjU1MDF8MHwxfHNlYXJjaHwzfHxjYXR8ZW58MHwwfHx8MTc1MDY5NjQyMnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Chat heureux" class="rounded-3xl shadow-2xl">
+                    <div class="absolute -top-6 -right-6 bg-white text-purple-600 p-6 rounded-2xl shadow-xl">
+                        <p class="text-4xl font-bold">+87%</p>
+                        <p class="text-lg">de Bien-être</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="avantages" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-animation">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Pourquoi Choisir Feliway?</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Une solution complète pour le bonheur et la sérénité de votre compagnon félin
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center scroll-animation">
+                    <div class="bg-purple-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sécurité Garantie</h3>
+                    <p class="text-gray-600">Testé et approuvé par des vétérinaires du monde entier</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1501820488136-72669149e0d4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MjU1MDF8MHwxfHNlYXJjaHw1fHxjYXR8ZW58MHwwfHx8MTc1MDY5NjQyMnww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" data-initial="true">
+                <div class="text-center scroll-animation" style="animation-delay: 0.2s">
+                    <div class="bg-purple-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-sync text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Mises à Jour</h3>
+                    <p class="text-gray-600">Améliorations régulières via l'application mobile</p>
+                </div>
+                <div class="text-center scroll-animation" style="animation-delay: 0.3s">
+                    <div class="bg-purple-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Support 24/7</h3>
+                    <p class="text-gray-600">Une équipe dédiée pour répondre à toutes vos questions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="temoignages" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-animation">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Ce que Disent nos Clients</span>
+                </h2>
+                <p class="text-xl text-gray-600">Des milliers de chats heureux à travers le monde</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg scroll-animation">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Mon chat Minou était très anxieux depuis notre déménagement. Avec Feliway, il est redevenu le chat joueur et affectueux que j'ai toujours connu!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://fakeimg.pl/60x60" alt="Client" class="rounded-full">
+                        <div>
+                            <p class="font-semibold">Marie Dupont</p>
+                            <p class="text-sm text-gray-500">Propriétaire de Minou</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg scroll-animation" style="animation-delay: 0.2s">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"L'application est géniale! Je peux contrôler le diffuseur même quand je suis au travail. Mes deux chats s'entendent beaucoup mieux maintenant."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://fakeimg.pl/60x60" alt="Client" class="rounded-full">
+                        <div>
+                            <p class="font-semibold">Thomas Bernard</p>
+                            <p class="text-sm text-gray-500">Propriétaire de Felix et Luna</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg scroll-animation" style="animation-delay: 0.4s">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"En tant que vétérinaire, je recommande Feliway à tous mes clients. C'est une solution naturelle et efficace pour le bien-être des chats."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://fakeimg.pl/60x60" alt="Client" class="rounded-full">
+                        <div>
+                            <p class="font-semibold">Dr. Sophie Martin</p>
+                            <p class="text-sm text-gray-500">Vétérinaire</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-purple-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">Offre Spéciale Limitée!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Profitez de 20% de réduction sur votre première commande et recevez gratuitement notre guide "Comment rendre votre chat plus heureux"
+            </p>
+            <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-8 max-w-md mx-auto mb-8">
+                <p class="text-3xl font-bold mb-2">Prix Spécial: 79,99€</p>
+                <p class="text-lg line-through opacity-75">Prix normal: 99,99€</p>
+            </div>
+            <button class="bg-white text-purple-600 px-10 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transform hover:scale-105 transition-all shadow-xl">
+                <i class="fas fa-shopping-cart mr-2"></i> J'en Profite Maintenant
+            </button>
+            <p class="mt-6 text-purple-200">
+                <i class="fas fa-clock mr-2"></i> Offre valable encore 48 heures
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">
+                        <span class="gradient-text">Contactez-nous</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Notre équipe est là pour répondre à toutes vos questions sur le bien-être de votre chat
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-purple-100 p-4 rounded-full">
+                                <i class="fas fa-envelope text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-gray-600">contact@feliway.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-purple-100 p-4 rounded-full">
+                                <i class="fas fa-phone text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Téléphone</p>
+                                <p class="text-gray-600">0800 123 456</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-purple-100 p-4 rounded-full">
+                                <i class="fas fa-map-marker-alt text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Adresse</p>
+                                <p class="text-gray-600">123 Rue du Chat Heureux, 75001 Paris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Nom</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none" placeholder="Votre nom">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none" placeholder="votre@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <textarea class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-600 focus:outline-none h-32" placeholder="Votre message..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                            Envoyer le Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-paw text-3xl text-purple-400"></i>
+                        <span class="text-2xl font-bold">Feliway</span>
+                    </div>
+                    <p class="text-gray-400">Le bonheur connecté pour votre chat</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Produits</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Diffuseur Connecté</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Recharges</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Application Mobile</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Guide d'utilisation</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Suivez-nous</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-purple-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-purple-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-3 rounded-full hover:bg-purple-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2025 Feliway. Tous droits réservés. Fait avec <i class="fas fa-heart text-purple-400"></i> pour les chats</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animation').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
